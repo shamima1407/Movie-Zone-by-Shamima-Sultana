@@ -1,0 +1,104 @@
+{% extends "home/layout.html" %}
+{% load static %}
+{% block body %}
+<!-- single -->
+
+<div class="single-page-agile-main">
+    <div class="container">
+        <!-- /w3l-medile-movies-grids -->
+        <div class="agileits-single-top">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Single</li>
+            </ol>
+        </div>
+        <div class="single-page-agile-info">
+            <!-- /movie-browse-agile -->
+            <div class="show-top-grids-w3lagile">
+                <div class="col-sm-8 single-left">
+                    <div class="song">
+                        <div class="song-info">
+                            <h3>{{single.name}}</h3>
+                        </div>
+						<div>
+                            <iframe allowfullscreen="" frameborder="0" src="{{single.video}}" class="embed-responsive-item" width="750" height="375"></iframe>
+						</div>
+						<script src="{% static 'home/assets/js/ml-video.js' %}"></script>
+                    </div>
+
+
+                    <!-----------------taimur------------------------>
+                    <div class="clearfix"> </div>
+
+                    <div class="all-comments">
+                        <div class="media-grids">
+                            <div class="media">
+                                <h5 style="background-color:Orange;text-align: center; font-size: 40px; font-family: Aclonica, sans-serif;"><strong>STORY</strong></h5>
+                                <div class="media-body">
+                                    <p> {{single.story}} </p>
+                                    <p style="background-color:Orange;text-align: center; color: Orange;"><span>.</span></p>
+                                </div>
+                                <ul class="movie-meta">
+                                    <li>
+                                        <strong>Rating: </strong> {{single.rating}}
+                                    </li>
+                                    <li><strong>Length:</strong> {{single.duration}}</li>
+                                    <li><strong>Category:</strong> {{single.gener1}} | {{single.gener2}}</li>
+                                </ul>
+
+                                <ul class="starring">
+                                    <li><strong>Director:</strong> {{single.director}}</li>
+                                    <li><strong>Actors:</strong> {{single.cast1}} | {{single.cast2}} | {{single.cast3}}</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-----------------taimur------------------------>
+                    <div class="clearfix"> </div>
+
+                    <div class="all-comments">
+                        <div class="all-comments-info">
+                            <a href="#">Comments</a>
+                            <div class="agile-info-wthree-box">
+                                <form>
+                                    <input type="text" placeholder="Name" required="">
+                                    <input type="text" placeholder="Email" required="">
+                                    <input type="text" placeholder="Phone" required="">
+                                    <textarea placeholder="Message" required=""></textarea>
+                                    <input type="submit" value="SEND">
+                                    <div class="clearfix"> </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 single-right">
+                    <h3>Popular movies</h3>
+                    <div class="single-grid-right">
+						{% for p in popular %}
+                        <div class="single-right-grids">
+                            <div class="col-md-4 single-right-grid-left">
+                                <a href="single.html"><img src="{{ p.img.url }}" alt="" /></a>
+                            </div>
+                            <div class="col-md-8 single-right-grid-right">
+                                <a href="single.html" class="title"> {{p.name}} ({{p.year}})</a>
+                                <p class="author"><a href="#" class="author">{{p.director}}</a></p>
+                                <p class="views">{{p.gener1}} | {{p.gener2}}</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+						{% endfor %}
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- //movie-browse-agile -->
+            <!--body wrapper start-->
+            <!--body wrapper end-->
+        </div>
+    </div>
+    <!-- //w3l-latest-movies-grids -->
+</div>
+<!-- //w3l-medile-movies-grids -->
+{% endblock %}
