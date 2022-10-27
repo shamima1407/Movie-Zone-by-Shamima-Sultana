@@ -1,0 +1,166 @@
+{% extends "home/layout.html" %}
+{% load static %}
+{% block body %}
+<!-- /w3l-medile-movies-grids -->
+	<div class="general-agileits-w3l">
+		<div class="w3l-medile-movies-grids">
+			<!-- /movie-browse-agile -->
+			<div class="movie-browse-agile">
+				 <!--/browse-agile-w3ls -->
+				<div class="browse-agile-w3ls general-w3ls">
+						<div class="tittle-head">
+							<h4 class="latest-text">Action </h4>
+							<div class="container">
+								<div class="agileits-single-top">
+									<ol class="breadcrumb">
+									  <li><a href="{% url 'index' %}">Home</a></li>
+									  <li>Genres</li>
+									  <li class="active">Action</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					<div class="container">
+						<div class="browse-inner">
+							{% for a in action_row1 %}
+							<div class="col-md-2 w3l-movie-gride-agile">
+									<a href="{% url 'single'%}" class="hvr-shutter-out-horizontal"><img src="{{ a.img.url }}" title={{ a.name }} alt=" " />
+										<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+									</a>
+								<div class="mid-1">
+									<div class="w3l-movie-text">
+										<h6><a>{{ a.name }}</a></h6>							
+									</div>
+									<div class="mid-2">
+										<p>Year: {{ a.year }}</p>
+										<div class="block-stars">
+											<ul class="w3l-ratings">
+													 <p>Rating: {{ a.rating }}</p>													  
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</div>
+								<div class="ribben two">
+									<p>NEW</p>
+								</div>	
+							</div>
+							{% endfor %}
+							<div class="clearfix"></div>
+						</div>								
+						<div class="browse-inner">
+								{% for a in action_row2 %}
+								<div class="col-md-2 w3l-movie-gride-agile">
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="{{ a.img.url }}" title={{ a.name }} alt=" " />
+											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+										</a>
+									<div class="mid-1">
+										<div class="w3l-movie-text">
+											<h6><a href="single.html">{{ a.name }}</a></h6>							
+										</div>
+										<div class="mid-2">
+											<p>Year: {{ a.year }}</p>
+											<div class="block-stars">
+												<ul class="w3l-ratings">
+														 <p>Rating: {{ a.rating }}</p>													  
+												</ul>
+											</div>
+											<div class="clearfix"></div>
+										</div>	
+									</div>
+									<div class="ribben two">
+										<p>NEW</p>
+									</div>	
+								</div>							
+								{% endfor %}
+								<div class="clearfix"></div>
+						</div>
+						<div class="browse-inner">
+								{% for a in action_row3 %}
+								<div class="col-md-2 w3l-movie-gride-agile">
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="{{ a.img.url }}" title={{ a.name }} alt=" " />
+											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+										</a>
+									<div class="mid-1">
+										<div class="w3l-movie-text">
+											<h6><a href="single.html">{{ a.name }}</a></h6>							
+										</div>
+										<div class="mid-2">
+											<p>Year: {{ a.year }}</p>
+											<div class="block-stars">
+												<ul class="w3l-ratings">
+														 <p>Rating: {{ a.rating }}</p>													  
+												</ul>
+											</div>
+											<div class="clearfix"></div>
+										</div>	
+									</div>
+									<div class="ribben two">
+										<p>NEW</p>
+									</div>	
+								</div>							
+								{% endfor %}
+								<div class="clearfix"></div>
+						</div>
+						<div class="browse-inner">
+								{% for a in action_row4 %}
+								<div class="col-md-2 w3l-movie-gride-agile">
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="{{ a.img.url }}" title={{ a.name }} alt=" " />
+											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+										</a>
+									<div class="mid-1">
+										<div class="w3l-movie-text">
+											<h6><a href="single.html">{{ a.name }}</a></h6>							
+										</div>
+										<div class="mid-2">
+											<p>Year: {{ a.year }}</p>
+											<div class="block-stars">
+												<ul class="w3l-ratings">
+														 <p>Rating: {{ a.rating }}</p>													  
+												</ul>
+											</div>
+											<div class="clearfix"></div>
+										</div>	
+									</div>
+									<div class="ribben two">
+										<p>NEW</p>
+									</div>	
+								</div>							
+								{% endfor %}
+								<div class="clearfix"></div>
+						</div>
+						<div class="browse-inner">
+								{% for a in action_row5 %}
+								<div class="col-md-2 w3l-movie-gride-agile">
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="{{ a.img.url }}" title={{ a.name }} alt=" " />
+											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+										</a>
+									<div class="mid-1">
+										<div class="w3l-movie-text">
+											<h6><a href="single.html">{{ a.name }}</a></h6>							
+										</div>
+										<div class="mid-2">
+											<p>Year: {{ a.year }}</p>
+											<div class="block-stars">
+												<ul class="w3l-ratings">
+														 <p>Rating: {{ a.rating }}</p>													  
+												</ul>
+											</div>
+											<div class="clearfix"></div>
+										</div>	
+									</div>
+									<div class="ribben two">
+										<p>NEW</p>
+									</div>	
+								</div>							
+								{% endfor %}
+								<div class="clearfix"></div>
+						</div>
+						
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+				    <!-- //movie-browse-agile -->
+{% endblock %}

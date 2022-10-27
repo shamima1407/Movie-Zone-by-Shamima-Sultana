@@ -1,0 +1,193 @@
+<!--
+Prepared by: Shamima Sultana
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>One Movies an Entertainment Category Flat Bootstrap Responsive Website Template</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="One Movies Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="{% static 'home/css/bootstrap.css' %}" />
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'home/css/faqstyle.css' %}" type="text/css" media="all" />
+    <link href="{% static 'home/css/medile.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'home/css/single.css' %}" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{% static 'home/css/contactstyle.css' %}" type="text/css" media="all" />
+    <!-- news-css -->
+    <link rel="stylesheet" href="{% static 'home/news-css/news.css' %}" type="text/css" media="all" />
+    <!-- //news-css -->
+    <!-- list-css -->
+    <link rel="stylesheet" href="{% static 'home/list-css/list.css' %}" type="text/css" media="all" />
+    <!-- //list-css -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" />
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script type="text/javascript" src="{% static 'home/js/jquery-2.1.4.min.js' %}"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="{% static 'home/js/move-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/js/easing.js' %}"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- tables -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/list-css/table-style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'home/list-css/basictable.css' %}" />
+    <script type="text/javascript" src="{% static 'home/list-js/jquery.basictable.min.js' %}"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  $('#table').basictable();
+
+  $('#table-breakpoint').basictable({
+	breakpoint: 768
+  });
+});
+    </script>
+    <!-- //tables -->
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="w3layouts_logo">
+                <a href="{% url 'index' %}"><p><img src="{% static 'home/images/1.jpg' %}" alt=" "></p></a>
+            </div>
+            <div class="w3l_sign_in_register">
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> (+880) 18727922</li>
+                    <li><a href="{% url 'registration' %}" data-toggle="modal">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //header -->
+    <!-- nav -->
+    <div class="faq">
+        <h4 class="latest-text w3_faq_latest_text w3_latest_text">Movies List</h4>
+        <div class="container">
+            <div class="agileits-news-top">
+            </div>
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                            <div class="agile-news-table">
+                                <table id="table-breakpoint">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Movie Name</th>
+                                            <th>Year</th>
+                                            <th>Duration</th>
+                                            <th>Language</th>
+                                            <th>Genre</th>
+                                            <th>Rating</th>
+                                        </tr>
+                                    </thead>
+                                    {% for l in list %}
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ l.id }}</td>
+											<td class="w3-list-img"><a href="single.html"><img src="{{ l.img.url }}" alt="" /> <span>{{ l.name }}</span></a></td>
+                                            <td class="w3-list-img"><span>{{ l.year }}</span></a></td>
+                                            <td>{{ l.duration }}</td>
+                                            <td>{{ l.language }}</td>
+                                            <td class="w3-list-info"><a>{{ l.gener1 }}, {{ l.gener2 }}</a></td>
+                                            <td class="w3-list-info"><a>{{ l.rating }}</a></td>
+                                    </tbody>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="w3ls_footer_grid">
+                <div class="col-md-6 w3ls_footer_grid_left">
+
+                <div class="col-md-6 w3ls_footer_grid_right">
+                    <a href="{% url 'index' %}"><p><img src="{% static 'home/images/1.jpg' %}" alt=" "></p></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-5 w3ls_footer_grid1_left">
+                <p>&copy; 2021 Movie Zone. Designed by Shamima Sultana | Created on educational purpose only.</p>
+            </div>
+            <div class="col-md-7 w3ls_footer_grid1_right">
+                <ul>
+                    <li>
+                        <a href="genres.html">Movies</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">About Us/a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+    <!-- //footer -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+    <script>
+$(document).ready(function(){
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
+});
+    </script>
+    <!-- //Bootstrap Core JavaScript -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+</html>
